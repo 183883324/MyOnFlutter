@@ -4,6 +4,9 @@ import 'demo/DrawerDemo.dart';
 import 'demo/BottomNavigationBarDemo.dart';
 import 'demo/listViewDemo.dart';
 import 'demo/BasicDemo.dart';
+import 'demo/LayoutDemo.dart';
+import 'demo/ViewDemo.dart';
+import 'demo/ItemDemo.dart';
 
 //程序的入口
 void main() => runApp(App());
@@ -34,7 +37,7 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return DefaultTabController(
-        length: 3,
+        length: 5,
         child: Scaffold(
           //为界面提供基本的结构
           backgroundColor: Colors.white,
@@ -72,6 +75,8 @@ class Home extends StatelessWidget {
                 Tab(icon: Icon(Icons.local_florist)),
                 Tab(icon: Icon(Icons.change_history)),
                 Tab(icon: Icon(Icons.directions_bike)),
+                Tab(icon: Icon(Icons.add_circle)),
+                Tab(icon: Icon(Icons.keyboard_tab)),
               ],
             ),
           ),
@@ -81,7 +86,9 @@ class Home extends StatelessWidget {
               // ignore: undefined_operator, undefined_operator, undefined_operator
               listViewDemo(),
               BasicDemo(),
-              Icon(Icons.directions_bike, size: 128.0, color: Colors.cyanAccent)
+              LayoutDemo(),
+              ViewDemo(),
+              ItemDemo(),
             ],
           ),
           //显示hello这个控件

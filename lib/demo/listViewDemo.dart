@@ -15,7 +15,8 @@ class listViewDemo extends StatelessWidget {
         //Column则用来实现纵向的线性布局  Row用来实现横向的线性布局    child所包含的元素只有一个
         children: <Widget>[
           //而children是多个所以它里面是数组
-          Image.network(posts[post].imageUrl),
+          Image.network(posts[post].imageUrl,fit: BoxFit.fill,),
+
           SizedBox(
             //能强制子控件具有特定宽度、高度或两者都有,使子控件设置的宽高失效
             height: 16.0,

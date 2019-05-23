@@ -13,12 +13,17 @@ class ContainerDemo extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Container(
+      //div
       //  color: Colors.yellow[100],
-      decoration: BoxDecoration(//背景
-          image: DecorationImage(//Opacity:透明度
-             colorFilter: ColorFilter.mode(Colors.indigoAccent[400].withOpacity(0.5), BlendMode.hardLight),
-              fit: BoxFit.cover,//平铺
-           // alignment: Alignment.topCenter,//设置图片的位置顶部中央，
+      decoration: BoxDecoration(
+          //背景
+          image: DecorationImage(
+              //Opacity:透明度
+              colorFilter: ColorFilter.mode(
+                  Colors.indigoAccent[400].withOpacity(0.5),
+                  BlendMode.hardLight),
+              fit: BoxFit.cover, //平铺
+              // alignment: Alignment.topCenter,//设置图片的位置顶部中央，
               image: NetworkImage(
                   "http://img.hb.aicdn.com/e411e58dbd56ad3227724bbbbd7eb07416e4b43a46a41-JGzo9p_fw658"))),
       //整体是一个水平布局
