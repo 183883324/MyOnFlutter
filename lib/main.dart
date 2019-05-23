@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'demo/listViewDemo.dart';
 import 'demo/DrawerDemo.dart';
 import 'demo/BottomNavigationBarDemo.dart';
-  import 'demo/listViewDemo.dart';
+import 'demo/listViewDemo.dart';
+import 'demo/BasicDemo.dart';
 
 //程序的入口
 void main() => runApp(App());
@@ -16,10 +17,11 @@ class App extends StatelessWidget {
     //Scaffold组件是Material Design布局结构的基本实现。
     // 此类提供了用于显示drawer、snackbar和底部sheet的API。MaterialApp 的 child 是 Scaffold Widget。
     return MaterialApp(
-      debugShowCheckedModeBanner: false, //去掉横幅
+      //debugShowCheckedModeBanner: false, //去掉横幅
       //      home应用进入的首页，Scaffold整体布局
       home: Home(),
       theme: ThemeData(
+          //点击水波纹效果
           splashColor: Colors.white70,
           highlightColor: Color.fromRGBO(225, 225, 225, 0.5), //高亮颜色
           primarySwatch: Colors.yellow), //设置主题的颜色为黄色
@@ -28,7 +30,6 @@ class App extends StatelessWidget {
 }
 
 class Home extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -36,8 +37,9 @@ class Home extends StatelessWidget {
         length: 3,
         child: Scaffold(
           //为界面提供基本的结构
-          backgroundColor: Colors.green[100],
+          backgroundColor: Colors.white,
           //我们可以将 Scaffold 理解为一个布局的容器。可以在这个容器中绘制我们的用户界面。
+          // ignore: argument_type_not_assignable
           appBar: AppBar(
 //              leading: IconButton(
 //                  //左边的图标
@@ -50,6 +52,7 @@ class Home extends StatelessWidget {
             elevation: 100.0,
             //Bar下的阴影 默认 4.0
             centerTitle: true,
+            //中间显示标题
             actions: <Widget>[
               IconButton(
                   icon: Icon(Icons.search),
@@ -77,7 +80,7 @@ class Home extends StatelessWidget {
             children: <Widget>[
               // ignore: undefined_operator, undefined_operator, undefined_operator
               listViewDemo(),
-              Icon(Icons.change_history, size: 128.0, color: Colors.amber),
+              BasicDemo(),
               Icon(Icons.directions_bike, size: 128.0, color: Colors.cyanAccent)
             ],
           ),
@@ -85,6 +88,4 @@ class Home extends StatelessWidget {
           bottomNavigationBar: BoottomNacigationBarDemo(),
         ));
   }
-
-
 }
