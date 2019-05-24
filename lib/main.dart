@@ -7,6 +7,8 @@ import 'demo/BasicDemo.dart';
 import 'demo/LayoutDemo.dart';
 import 'demo/ViewDemo.dart';
 import 'demo/ItemDemo.dart';
+import 'demo/SliverDemo.dart';
+import 'demo/NavigatorDemo.dart';
 
 //程序的入口
 void main() => runApp(App());
@@ -21,8 +23,18 @@ class App extends StatelessWidget {
     // 此类提供了用于显示drawer、snackbar和底部sheet的API。MaterialApp 的 child 是 Scaffold Widget。
     return MaterialApp(
       //debugShowCheckedModeBanner: false, //去掉横幅
-      //      home应用进入的首页，Scaffold整体布局
-      home: Home(),
+      //      home应用进入的首页，Scaffold整体布局    跟是home（）属性设置的小部件
+    //  home: NavigatorDemo(),
+//     initialRoute:'/',   //设置初始路由
+//      routes: {
+//       '/':(context)=>NavigatorDemo(),
+//        //   "/"表示路由的跟
+//        '/about': (context) => Page(
+//              Titale: "about",
+//            ), //路由的值
+//      },
+       home: Home(),
+      //home: SliverDemo(),
       theme: ThemeData(
           //点击水波纹效果
           splashColor: Colors.white70,
@@ -88,7 +100,7 @@ class Home extends StatelessWidget {
               BasicDemo(),
               LayoutDemo(),
               ViewDemo(),
-              ItemDemo(),
+              SliverDemo(),
             ],
           ),
           //显示hello这个控件
