@@ -9,6 +9,7 @@ import 'demo/ViewDemo.dart';
 import 'demo/ItemDemo.dart';
 import 'demo/SliverDemo.dart';
 import 'demo/NavigatorDemo.dart';
+import 'demo/FormDemo.dart';
 
 //程序的入口
 void main() => runApp(App());
@@ -25,15 +26,16 @@ class App extends StatelessWidget {
       //debugShowCheckedModeBanner: false, //去掉横幅
       //      home应用进入的首页，Scaffold整体布局    跟是home（）属性设置的小部件
     //  home: NavigatorDemo(),
-//     initialRoute:'/',   //设置初始路由
-//      routes: {
-//       '/':(context)=>NavigatorDemo(),
-//        //   "/"表示路由的跟
-//        '/about': (context) => Page(
-//              Titale: "about",
-//            ), //路由的值
-//      },
-       home: Home(),
+     initialRoute:'/form',   //设置初始路由
+      routes: {
+       '/':(context)=>NavigatorDemo(),
+        //   "/"表示路由的跟
+        '/about': (context) => Page(
+              Titale: "about",
+            ), //路由的值
+        '/form': (context) => FormDemo( ), //路由的值
+      },
+     //  home: Home(),
       //home: SliverDemo(),
       theme: ThemeData(
           //点击水波纹效果

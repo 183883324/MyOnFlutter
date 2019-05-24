@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../model/post.dart';
+import './PostDemo.dart';
 
 class listViewDemo extends StatelessWidget {
   //post  定义第几个
@@ -14,7 +15,8 @@ class listViewDemo extends StatelessWidget {
           Column(
             //Column则用来实现纵向的线性布局  Row用来实现横向的线性布局    child所包含的元素只有一个
             children: <Widget>[
-              AspectRatio(//溅墨动画效果
+              AspectRatio(
+                //溅墨动画效果
                 aspectRatio: 16 / 9,
                 child: //而children是多个所以它里面是数组
                     Image.network(
@@ -48,7 +50,8 @@ class listViewDemo extends StatelessWidget {
               splashColor: Colors.white.withOpacity(0.3),
               highlightColor: Colors.white.withOpacity(0.1),
               onTap: () {
-                debugPrint("Tap");
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => PostShow(post: posts[post])));
               },
             ),
           ))
